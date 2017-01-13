@@ -38,6 +38,9 @@ $ yarn add webpack-sentry-plugin --dev
          project: 'your-project-name',
          apiKey: process.env.SENTRY_API_KEY,
          
+         // Sentry server option
+         baseSentryURL: 'https://your-sentry-onpremise.com/', // optional, default to 'https://sentry.io/api/0/projects' 
+         
          // Release version name/hash is required
          release: function() {
            return process.env.GIT_SHA
